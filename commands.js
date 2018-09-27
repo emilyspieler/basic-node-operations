@@ -18,8 +18,8 @@ function evaluateCmd(userInput) {
      break;
      case "cat":
        commandLibrary.cat(userInputArray.slice(1));
-       break;
-     default "err":
+    break;
+     default:
      commandLibrary.err(userInputArray.slice(1));
  }
 }
@@ -37,6 +37,7 @@ const commandLibrary = {
         console.error('There was an error reading the file!', err);
         return;
       }
+    })
     },
 
 "cat": function(fullPath) {
@@ -46,7 +47,7 @@ const commandLibrary = {
           done(data);
       });
     }
-   };
+  };
 
 
 module.exports.commandLibrary = commandLibrary;
