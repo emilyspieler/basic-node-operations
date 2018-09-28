@@ -24,7 +24,6 @@ function evaluateCmd(userInput) {
  }
 }
 
-//where we will store the logic of our commands
 const commandLibrary = {
   "echo": function(userInput) {
        done(userInput);
